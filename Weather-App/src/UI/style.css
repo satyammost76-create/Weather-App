@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --day: linear-gradient(135deg, #56ccf2, #2f80ed);
+  --night: linear-gradient(135deg, #141E30, #243B55);
+  --rainy: linear-gradient(135deg, #667db6, #0082c8, #0082c8, #667db6);
+  --cloudy: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+
+body {
+  background: var(--day);
+  color: white;
+  min-height: 100vh;
+  transition: background 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app {
+  width: 95%;
+  max-width: 1000px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.clock {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #ffe66d;
+}
+
+.search {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search input, .search button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search button {
+  background: #ffba08;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  background: #faa307;
+}
+
+.main {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading {
+  background: rgba(255,255,255,0.15);
+  padding: 18px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.weather-box {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+  width: 300px;
+}
+
+.weather-box img {
+  width: 100px;
+  height: 100px;
+}
+
+.temp {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.forecast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.day-card {
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 12px;
+  width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: pop 0.6s ease;
+}
+
+.day-card h4 {
+  margin-bottom: 5px;
+  color: #ffd166;
+}
+
+footer {
+  margin-top: 40px;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pop {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+

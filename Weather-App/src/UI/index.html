@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌦️ Real Weather with Sounds</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+    <header>
+        <h1>🌍 Weather application</h1>
+        <div id="clock" class="clock"></div>
+        <div class="search">
+            <input id="city" placeholder="Enter City (e.g. Bihar)" />
+            <input id="days" type="number" placeholder="Days" min="1" max="7" />
+            <button onclick="getForecast()">Search</button>
+            <button onclick="useLocation()">📍 Use My Location</button>
+        </div>
+    </header>
+
+    <section id="main" class="main">
+        <div class="loading">Type a city name or use location...</div>
+    </section>
+
+    <footer>
+        <p>Created by ❤️ Satyam | Realistic Weather Experience with Sound</p>
+    </footer>
+</div>
+
+<!-- 🎵 Weather Sounds -->
+<audio id="rainSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c6e8b503e2.mp3?filename=rain-ambient-110264.mp3" loop></audio>
+<audio id="sunnySound" src="https://cdn.pixabay.com/download/audio/2021/09/06/audio_8a3d7c66b2.mp3?filename=forest-birds-chirping-ambient-9752.mp3" loop></audio>
+<audio id="windSound" src="https://cdn.pixabay.com/download/audio/2021/09/06/audio_71ed2ed7cc.mp3?filename=wind-blowing-ambient-10189.mp3" loop></audio>
+<audio id="thunderSound" src="https://cdn.pixabay.com/download/audio/2021/09/06/audio_3c609f4ec3.mp3?filename=thunderstorm-ambient-10011.mp3" loop></audio>
+
+<script src="app.js"></script>
+</body>
+</html>
